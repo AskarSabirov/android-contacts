@@ -12,6 +12,7 @@ public class FilterContactTypeUi {
         this.selected = selected;
     }
 
+
     public FilterContactType getContactType() {
         return contactType;
     }
@@ -19,7 +20,9 @@ public class FilterContactTypeUi {
     public boolean isSelected() {
         return selected;
     }
-
+    public boolean theSameAs(@NonNull FilterContactTypeUi newItem) {
+        return this.getContactType() == newItem.getContactType();
+    }
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
